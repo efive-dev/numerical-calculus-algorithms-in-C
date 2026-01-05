@@ -1,5 +1,5 @@
-#ifndef FUNCTION_DEF_H
-#define FUNCTION_DEF_H
+#ifndef FUNCTIONS_DEFINITIONS_H
+#define FUNCTIONS_DEFINITIONS_H
 
 /*
  * Computes:
