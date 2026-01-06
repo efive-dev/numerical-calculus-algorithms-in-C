@@ -9,20 +9,19 @@
  *
  * Returns NAN if denominator is zero or near zero
  */
-double function(double a, double b, double c, double x)
-{
-    double x2 = x * x;
-    double x3 = x2 * x;
-    double x4 = x2 * x2;
+double function(double a, double b, double c, double x) {
+	double x2 = x * x;
+	double x3 = x2 * x;
+	double x4 = x2 * x2;
 
-    double denominator = c * x4 - 23.0;
+	double denominator = c * x4 - 23.0;
 
-    if (fabs(denominator) < EPSILON) {
-        return NAN;
-    }
+	if (fabs(denominator) < EPSILON) {
+		return NAN;
+	}
 
-    double numerator = a * x3 - b * x + c;
-    return numerator / denominator;
+	double numerator = a * x3 - b * x + c;
+	return numerator / denominator;
 }
 
 /*
@@ -34,21 +33,20 @@ double function(double a, double b, double c, double x)
  *
  * Returns NAN if denominator is zero or near zero
  */
-double derivative(double a, double b, double c, double x)
-{
-    double x2 = x * x;
-    double x3 = x2 * x;
-    double x4 = x2 * x2;
+double derivative(double a, double b, double c, double x) {
+	double x2 = x * x;
+	double x3 = x2 * x;
+	double x4 = x2 * x2;
 
-    double denominator = c * x4 - 23.0;
+	double denominator = c * x4 - 23.0;
 
-    if (fabs(denominator) < EPSILON) {
-        return NAN;
-    }
+	if (fabs(denominator) < EPSILON) {
+		return NAN;
+	}
 
-    double N  = a * x3 - b * x + c;
-    double Nd = 3.0 * a * x2 - b;
-    double Dd = 4.0 * c * x3;
+	double N = a * x3 - b * x + c;
+	double Nd = 3.0 * a * x2 - b;
+	double Dd = 4.0 * c * x3;
 
-    return (Nd * denominator - N * Dd) / (denominator * denominator);
+	return (Nd * denominator - N * Dd) / (denominator * denominator);
 }

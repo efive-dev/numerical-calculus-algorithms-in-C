@@ -12,4 +12,16 @@ double function(double a, double b, double c, double x);
  */
 double derivative(double a, double b, double c, double x);
 
+/*
+ * Struct to bundle the results, it contains:
+ *    - The root
+ *    - The number of iterations
+ *    - If the method succeded or not
+ */
+typedef struct {
+	double root;
+	int iterations;
+	int success;
+} Result;
+
 #endif /* FUNCTION_DEF_H */
