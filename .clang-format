@@ -1,0 +1,8 @@
+# .clang-format
+BasedOnStyle: LLVM
+UseTab: Always        # always use tabs
+IndentWidth: 4        # logical indent per level
+TabWidth: 4           # visual width of a tab
+BreakBeforeBraces: Attach   # puts opening brace on the same line
+AllowShortFunctionsOnASingleLine: false
+ColumnLimit: 0        # no line length limit
